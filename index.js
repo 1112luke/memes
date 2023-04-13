@@ -53,7 +53,7 @@ async function send(response){
   //austin
   var mailOptions = {
     from: 'lukescholler@gmail.com',
-    to: "avale1421@gmail.com",
+    to: "lukescholler@gmail.com",//"avale1421@gmail.com"
     subject: "Hour " + hour,
     html: htmlstring.replace("time", hour),
     attachments: [{
@@ -94,4 +94,9 @@ async function send(response){
 }
 
 sendEmail();
-cron.schedule("0 * * * *", sendEmail);
+//cron.schedule("* * * * *", sendEmail);
+
+//every minute
+//* * * * *
+//every hour
+//0 * * * *
